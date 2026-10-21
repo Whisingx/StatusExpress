@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Whising's Status Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+  <div id="shell">
+    <div id="desktop">
+      <div class="win-window open focused" id="status-window">
+        <div class="win-titlebar">
+          <span class="win-title-text">Whising's System Monitor</span>
+          <div class="win-titlebar-btns">
+            <button class="win-btn">_</button>
+            <button class="win-btn">🗖</button>
+            <button class="win-btn">X</button>
+          </div>
+        </div>
+
+        <div class="win-menubar">
+          <div class="menu-dropdown-container" id="viewMenuContainer">
+            <span id="viewMenuBtn" class="menu-item-btn">View</span>
+            <div class="win-dropdown-content" id="viewDropdown">
+              <a href="https://whising.space" target="_blank" class="win-dropdown-item">Contact Me</a>
+            </div>
+          </div>
+          <span onclick="fetchBetterStackData()" class="menu-item-btn">Refresh</span>
+        </div>
+
+        <div class="win-body">
+          <div style="font-size: 11px; margin-bottom: 2px;">Status Express: Whising's Status Website, Made for Boba Bash Delhi
+        </div>
+
+          <div id="endpoints-container" style="display: flex; flex-direction: column; gap: 6px; overflow-y: auto; flex: 1;">
+            <div style="padding: 12px; text-align: center;">Getting BetterStack Data, Please Wait.</div>
+          </div>
+        </div>
+
+        <div class="win-statusbar">
+          <div class="statusbar-pane" id="sys-status-text" style="flex: 1; border: none; padding: 0;">Status Express: Ready</div>
+          <div class="statusbar-pane" style="border: none; padding: 0; color: #404040;">status.whising.space - Last updated 22/10/2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HTML Template for Service Cards -->
+  <template id="service-card-template">
+    <div class="service-card" style="background: #c0c0c0; border: 2px solid #808080; border-right-color: #fff; border-bottom-color: #fff; padding: 8px 10px; margin-bottom: 6px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <span class="service-name" style="font-weight: bold; color: #000;"></span>
+          <button class="info-btn">i</button>
+        </div>
+        <span class="status-badge" style="font-size: 10px; font-weight: bold;"></span>
+      </div>
+      <div style="font-size: 10px; color: #404040; margin-bottom: 4px;">Setup History Status (Progress Blocks):</div>
+      <div class="history-container" style="background: #dfdfdf; padding: 4px; border: 2px solid #808080; border-right-color: #fff; border-bottom-color: #fff; overflow-x: auto; white-space: nowrap; height: 28px; display: flex; align-items: center;">
+      </div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
